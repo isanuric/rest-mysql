@@ -1,0 +1,19 @@
+== Quick Start
+
+`mvn clean install`
+
+== MySql
+
+`mysql&gt; CREATE DATABASE book_database
+`
+
+`mysql&gt; USE book_database;
+`
+
+`mysql&gt; CREATE TABLE book (bookId INT, name VARCHAR(20), autor VARCHAR(20), iban INT);
+`
+
+=== make some data
+
+`mysql&gt; INSERT INTO BOOK (id,name,autor,iban) VALUES(1,&quot;Grundriss Heidegger&quot;,&quot;Helmuth Vetter&quot;, 9783787322762);
+`
