@@ -1,19 +1,48 @@
+
+
+== MySql
+
+`mysql&gt; CREATE DATABASE book_database;`
+
+`mysql&gt; USE book_database;`
+
+`mysql&gt; CREATE TABLE book (bookId INT, name VARCHAR(20), autor VARCHAR(20), iban INT);`
+
+=== make some data
+
+`mysql&gt; INSERT INTO BOOK (id,name,autor,iban) VALUES(1,&quot;Grundriss Heidegger&quot;,&quot;Helmuth Vetter&quot;, 9783);`
+
+more data ...
+
+=== Check Table
+`mysql> SELECT * FROM book`
+
+you should see something like this:
+
+
+|===
+| bookId | name| autor| iban
+
+|1
+|Grundriss Heidegger
+|Helmuth Vetter
+|9783
+
+|2
+|Heidegger
+|Oliver Jahraus
+|9784
+
+|3
+|Heidegger
+|Udo Tietz
+|9785|
+|===
+
 == Quick Start
 
 `mvn clean install`
 
-== MySql
+run project
 
-`mysql&gt; CREATE DATABASE book_database
-`
-
-`mysql&gt; USE book_database;
-`
-
-`mysql&gt; CREATE TABLE book (bookId INT, name VARCHAR(20), autor VARCHAR(20), iban INT);
-`
-
-=== make some data
-
-`mysql&gt; INSERT INTO BOOK (id,name,autor,iban) VALUES(1,&quot;Grundriss Heidegger&quot;,&quot;Helmuth Vetter&quot;, 9783787322762);
-`
+http://localhost:8080/books/all
