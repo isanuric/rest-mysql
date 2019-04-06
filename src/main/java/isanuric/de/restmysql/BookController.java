@@ -25,10 +25,14 @@ public class BookController {
             @RequestParam String autor,
             @RequestParam Integer iban) {
 
+        // create new book
         Book book = new Book();
         book.setName(name);
         book.setAutor(autor);
         book.setIban(iban);
+
+        // add to repository
+        bookRepository.save(book);
 
         return "Done.";
     }

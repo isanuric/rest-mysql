@@ -6,7 +6,15 @@
 
 `mysql&gt; USE book_database;`
 
-`mysql&gt; CREATE TABLE book (bookId INT, name VARCHAR(20), autor VARCHAR(20), iban INT);`
+
+`CREATE TABLE 'book' +
+(  +
+  'id' int(11) NOT NULL AUTO_INCREMENT, +
+  'name' varchar(60) NOT NULL, +
+  'autor' varchar(100) NOT NULL, +
+  'iban' int(20) NOT NULL, +
+  PRIMARY KEY ('id') +
+);`
 
 === make some data
 
