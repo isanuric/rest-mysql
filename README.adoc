@@ -57,4 +57,4 @@ Get all:
 http://localhost:8080/books/all
 
 Create:
-http://localhost:8080/books/add?name=test01&autor=auth01&iban&1234
+http://localhost:8080/books/add?name=test01&autor=auth01&iban=1234
