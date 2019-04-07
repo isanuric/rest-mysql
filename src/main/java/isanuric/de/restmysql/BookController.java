@@ -3,7 +3,9 @@ package isanuric.de.restmysql;
 
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.util.Assert;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -34,7 +36,7 @@ public class BookController {
             @RequestParam String name,
             @RequestParam String autor,
             @RequestParam Integer iban) {
-        addBook(name, autor, iban);
+        this.addBook(name, autor, iban);
         return "Done";
 
     }
@@ -44,8 +46,15 @@ public class BookController {
             @RequestParam String name,
             @RequestParam String autor,
             @RequestParam Integer iban) {
-        addBook(name, autor, iban);
+        this.addBook(name, autor, iban);
         return "Done";
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<?> deleteUser(@PathVariable int id) {
+        Assert.notNull(id, "id could not be null.");
+        bookRepository.deleteById(id);
+        return ResponseEntity.ok().build();
     }
 
     // ~ Internal Methods

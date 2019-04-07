@@ -56,7 +56,7 @@ you should see something like this:
 
 run project
 
-
+=== Test CRUD operations
 Create (GET):
 http://localhost:8080/books/add?name=test01&autor=auth01&iban=1234
 
@@ -68,3 +68,7 @@ http://localhost:8080/books/all
 
 Get by id:
 http://localhost:8080/books/1
+
+Delete by id:
+``curl -X DELETE http://localhost:8080/books/delete/1
+``
