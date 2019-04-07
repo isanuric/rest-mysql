@@ -2,7 +2,7 @@
 
 == MySQL
 
-MySQL tutorial: https://dev.mysql.com/doc/refman/8.0/en/tutorial.html
+MySQL intro: https://dev.mysql.com/doc/refman/8.0/en/tutorial.html
 
 === Creation
 `mysql&gt; CREATE DATABASE book_database;`
@@ -10,7 +10,7 @@ MySQL tutorial: https://dev.mysql.com/doc/refman/8.0/en/tutorial.html
 `mysql&gt; USE book_database;`
 
 
-`CREATE TABLE 'book' +
+`mysql> CREATE TABLE 'book' +
 (  +
   'id' int(11) NOT NULL AUTO_INCREMENT, +
   'name' varchar(60) NOT NULL, +
@@ -19,13 +19,13 @@ MySQL tutorial: https://dev.mysql.com/doc/refman/8.0/en/tutorial.html
   PRIMARY KEY ('id') +
 );`
 
-=== Make some data
+=== Make some data (optional)
 
 `mysql&gt; INSERT INTO BOOK (id,name,autor,iban) VALUES(1,&quot;Grundriss Heidegger&quot;,&quot;Helmuth Vetter&quot;, 9783);`
 
 more data ...
 
-=== Check Table
+==== Check Table
 `mysql> SELECT * FROM book`
 
 you should see something like this:
@@ -56,8 +56,15 @@ you should see something like this:
 
 run project
 
+
+Create (GET):
+http://localhost:8080/books/add?name=test01&autor=auth01&iban=1234
+
+Create (POST):
+`$ curl --data "name=testPost&autor=authPost&iban=1235" http://localhost:8080/books/add`
+
 Get all:
 http://localhost:8080/books/all
 
-Create:
-http://localhost:8080/books/add?name=test01&autor=auth01&iban=1234
+Get by id:
+http://localhost:8080/books/1
