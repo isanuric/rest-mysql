@@ -1,5 +1,7 @@
 package isanuric.de.restmysql;
 
+import java.util.Collection;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 /**
@@ -7,5 +9,8 @@ import org.springframework.data.repository.CrudRepository;
  */
 
 public interface  BookRepository extends CrudRepository<Book, Integer> {
+
+    @Query("SELECT book FROM Book book WHERE b.status = 1")
+    Collection<Book> findAllExistBooks();
 
 }

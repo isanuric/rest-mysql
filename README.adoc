@@ -10,13 +10,14 @@ MySQL intro: https://dev.mysql.com/doc/refman/8.0/en/tutorial.html
 `mysql&gt; USE book_database;`
 
 
-`mysql> CREATE TABLE 'book' +
+`mysql> CREATE TABLE book +
 (  +
-  'id' int(11) NOT NULL AUTO_INCREMENT, +
-  'name' varchar(60) NOT NULL, +
-  'autor' varchar(100) NOT NULL, +
-  'iban' int(20) NOT NULL, +
-  PRIMARY KEY ('id') +
+  id int(11) NOT NULL AUTO_INCREMENT, +
+  name varchar(60) NOT NULL, +
+  autor varchar(100) NOT NULL, +
+  iban int(30) NOT NULL, +
+  status int (10) NOT NULL DEFAULT '1', +
+  PRIMARY KEY (id) +
 );`
 
 === Make some data (optional)
@@ -52,9 +53,9 @@ you should see something like this:
 
 == Quick Start
 
-`mvn clean install`
+* `mvn clean install`
 
-run project
+* build project
 
 === Test CRUD operations
 Create (GET):

@@ -57,6 +57,14 @@ public class BookController {
         return ResponseEntity.ok().build();
     }
 
+    // ~
+    // -----------------------------------------------------------------------------------------------------------------
+    @GetMapping("/current")
+    public Iterable<Book> getCurrentBooks() {
+        return bookRepository.findAllExistBooks();
+    }
+
+
     // ~ Internal Methods
     // -----------------------------------------------------------------------------------------------------------------
 

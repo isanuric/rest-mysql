@@ -26,5 +26,6 @@ public class Book {
     protected String name;
     private String autor;
     private Integer iban;
+    private Integer status;
 
 }
