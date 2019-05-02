@@ -37,4 +37,10 @@ public class Book {
 
     private Date timestamp;
 
+    public Book(@Size(min = 2, max = 20) String name, String autor, Integer iban, Integer status) {
+        this.name = name;
+        this.autor = autor;
+        this.iban = iban;
+        this.status = status;
+    }
 }
