@@ -90,6 +90,4 @@ public class BookControllerTest {
                 assertTrue(consumer.getResponseBody().get(0).contains("Done"))
         );
     }
-
-
 }
