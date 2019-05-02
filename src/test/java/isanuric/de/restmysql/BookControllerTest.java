@@ -85,7 +85,6 @@ public class BookControllerTest {
                 .exchange()
                 .expectHeader().valueEquals("Content-Type", JSON_CHARSET_UTF_8)
                 .expectStatus().isOk()
-                // TODO: 02/05/2019 use json
                 .expectBodyList(String.class).consumeWith(consumer ->
                 assertTrue(consumer.getResponseBody().get(0).contains("Done"))
         );
