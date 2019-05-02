@@ -5,7 +5,13 @@
 MySQL intro: https://dev.mysql.com/doc/refman/8.0/en/tutorial.html
 
 === Creation
+``$ mysql -u root -p
+``
+
+use your password and adjust it in `application.properties`
+
 `mysql&gt; CREATE DATABASE book_database;`
+
 
 `mysql&gt; USE book_database;`
 
@@ -16,7 +22,8 @@ MySQL intro: https://dev.mysql.com/doc/refman/8.0/en/tutorial.html
   name varchar(60) NOT NULL, +
   autor varchar(100) NOT NULL, +
   iban int(30) NOT NULL, +
-  status int (10) NOT NULL DEFAULT '1', +
+  status int (10) NOT NULL DEFAULT 1, +
+  timestamp TIMESTAMP, +
   PRIMARY KEY (id) +
 );`
 

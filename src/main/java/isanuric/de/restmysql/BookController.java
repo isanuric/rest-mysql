@@ -87,6 +87,7 @@ public class BookController {
         book.setName(name);
         book.setAutor(autor);
         book.setIban(iban);
+        book.setStatus(10);
 
         // add to repository
         bookRepository.save(book);
