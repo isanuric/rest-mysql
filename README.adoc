@@ -8,7 +8,7 @@ MySQL intro: https://dev.mysql.com/doc/refman/8.0/en/tutorial.html
 ``$ mysql -u root -p
 ``
 
-use your password and adjust it in `application.properties`
+use your password and adjust it in Spring Boot `application.properties`
 
 `mysql&gt; CREATE DATABASE book_database;`
 
@@ -40,15 +40,17 @@ you should see something like this:
 
 
 |===
-| bookId | name| autor| iban
+| bookId | name| autor| iban | ...
 
 |1
 |Grundriss Heidegger
 |Helmuth Vetter
 |9783
+|..
 
 |2
 |...
+|..
 |..
 |..
 
