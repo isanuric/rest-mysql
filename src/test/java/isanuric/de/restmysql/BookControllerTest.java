@@ -35,6 +35,15 @@ public class BookControllerTest {
 
     @Test
     public void  getByid() {
+        webTestClient.get()
+                .uri("/books/1")
+                .exchange()
+                .expectHeader().valueEquals("Content-Type", "application/json;charset=UTF-8")
+                .expectStatus().isOk()
+                // TODO: 02/05/2019 use json
+                .expectBodyList(String.class).consumeWith(consumer ->
+                assertTrue(consumer.getResponseBody().get(0).contains("\"id\":1"))
+        );
     }
 
     @Test

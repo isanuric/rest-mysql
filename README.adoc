@@ -27,7 +27,7 @@ use your password and adjust it in `application.properties`
   PRIMARY KEY (id) +
 );`
 
-=== Make some data (optional)
+=== Make some test data
 
 `mysql&gt; INSERT INTO BOOK (id,name,autor,iban) VALUES(1,&quot;Grundriss Heidegger&quot;,&quot;Helmuth Vetter&quot;, 9783);`
 
@@ -48,14 +48,10 @@ you should see something like this:
 |9783
 
 |2
-|Heidegger
-|Oliver Jahraus
-|9784
+|...
+|..
+|..
 
-|3
-|Heidegger
-|Udo Tietz
-|9785|
 |===
 
 == Quick Start
@@ -64,7 +60,7 @@ you should see something like this:
 
 * build project
 
-=== Test CRUD operations
+=== Smoke Test: CRUD operations
 Create (GET):
 http://localhost:8080/books/add?name=test01&autor=auth01&iban=1234
 
